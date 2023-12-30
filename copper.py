@@ -76,15 +76,15 @@ with tab1:
         if submit_button and flag==0:
             
             import pickle
-            with open(r"source/model.pkl", 'rb') as file:
+            with open(r"C:\Users\psara\Desktop\SARANYA_VS\cap5copper\model.pkl", 'rb') as file:
                 loaded_model = pickle.load(file)
-            with open(r'source/scaler.pkl', 'rb') as f:
+            with open(r'C:\Users\psara\Desktop\SARANYA_VS\cap5copper\scaler.pkl', 'rb') as f:
                 scaler_loaded = pickle.load(f)
 
-            with open(r"source/t.pkl", 'rb') as f:
+            with open(r"C:\Users\psara\Desktop\SARANYA_VS\cap5copper\t.pkl", 'rb') as f:
                 t_loaded = pickle.load(f)
 
-            with open(r"source/s.pkl", 'rb') as f:
+            with open(r"C:\Users\psara\Desktop\SARANYA_VS\cap5copper\s.pkl", 'rb') as f:
                 s_loaded = pickle.load(f)
 
             new_sample= np.array([[np.log(float(quantity_tons)),application,np.log(float(thickness)),float(width),country,float(customer),int(product_ref),item_type,status]])
@@ -131,13 +131,13 @@ with tab2:
              
         if csubmit_button and cflag==0:
             import pickle
-            with open(r"source/cmodel.pkl", 'rb') as file:
+            with open(r"C:\Users\psara\Desktop\SARANYA_VS\cap5copper\cmodel.pkl", 'rb') as file:
                 cloaded_model = pickle.load(file)
 
-            with open(r'source/cscaler.pkl', 'rb') as f:
+            with open(r"C:\Users\psara\Desktop\SARANYA_VS\cap5copper\cscaler.pkl", 'rb') as f:
                 cscaler_loaded = pickle.load(f)
 
-            with open(r"source/ct.pkl", 'rb') as f:
+            with open(r"C:\Users\psara\Desktop\SARANYA_VS\cap5copper\ct.pkl", 'rb') as f:
                 ct_loaded = pickle.load(f)
 
             # Predict the status for a new sample
@@ -152,4 +152,4 @@ with tab2:
             else:
                 st.write('## :red[The status is Lost] ')
                 
-st.write( f'<h6 style="color:rgb(0, 153, 153,0.35);">App Created by TulasiNND</h6>', unsafe_allow_html=True )  
+st.write( f'<h6 style="color:rgb(0, 153, 153,0.35);">App Created by Saranya</h6>', unsafe_allow_html=True )  
